@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog</title>
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Employee Data Management</h1>
+     <div class="controls-bar">
+      <a id="newPostBtn" href="/new">Add Employee</a>
+      <div class="search-group">
+        <form action="/search" method="post">
+        <input type="text" name="search" id="searchInput" placeholder="Search by name, email, or position..." />
+        <button id="searchButton" type="submit" class="edit">Search</button>
+        </form>
+      </div>
+    </div>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>E-mail</th>
+        <th>Position</th>
+        <th class="action-column">Action</th>
+      </tr>
+      <% posts.forEach(post=> { %>
+      <tr>
+        <td><%=post.name%></td>
+        <td><%=post.email%></td>
+        <td><%=post.position%></td>
+        <td><a class="edit" href="/edit/<%= post.id %>">Edit</a>
+          <a class="delete" href="/api/posts/delete/<%= post.id %>">Delete</a></td>
+      </tr>
+      <% }); %>
+    </table>
+  </div>
+</body>
+
+</html>
