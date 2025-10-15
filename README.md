@@ -2,6 +2,10 @@
 
 A full-stack web application for managing employee data, built with Node.js, Express, PostgreSQL, and EJS. This application allows users to perform CRUD (Create, Read, Update, Delete) operations on employee records through a simple web interface.
 
+## Live Demo
+
+Check out the live application: [Employee Data Management](https://employee-data-management-dw5d.onrender.com/)
+
 ## Features
 
 - **View Employees**: Display a list of all employees in a table format.
