@@ -5,7 +5,7 @@ import pg from "pg";
 import env from "dotenv";
 
 const app = express();
-const port = 4000;
+const port = process.env.PORT ? parseInt(process.env.PORT) + 1 : 4000; // Use a different port if PORT is set
 env.config();
 
 const db = new pg.Client({
